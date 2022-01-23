@@ -1,0 +1,23 @@
+.SearchForm {
+  width: 350px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.SearchForm input {
+  border-radius: 30px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+.SearchForm .bi-search {
+  color: #92a9bd;
+  position: absolute;
+  right: 12px;
+  top: 5px;
+  transition: all 150ms ease-in-out;
+}
+
+.SearchForm .bi-search:hover {
+  cursor: pointer;
+  color: #506475;
+}
