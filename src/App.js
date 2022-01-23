@@ -8,6 +8,7 @@ export default function App() {
       <div className="container">
         <header>Dictionary</header>
         <SearchForm />
+        <hr />
         <footer>
           <a
             href="https://github.com/heindrikje/dictionary-app-react"

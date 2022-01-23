@@ -11,7 +11,7 @@ export default function SearchForm() {
 
   function search(event) {
     event.preventDefault();
-    let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
+    const apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${word}`;
     axios.get(apiUrl).then(handleResponse);
   }
 
@@ -20,13 +20,12 @@ export default function SearchForm() {
   }
   return (
     <div className="SearchForm">
-      <form onSubmit={search} className="flexContainer">
+      <form onSubmit={search}>
         <input
           type="search"
-          placeholder="What word are you looking for?"
-          className="form-control"
-          autoFocus="on"
+          placeholder="Enter a word"
           onChange={updateWord}
+          autoFocus={true}
         />
       </form>
       <i className="bi bi-search"></i>
