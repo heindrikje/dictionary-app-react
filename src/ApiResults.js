@@ -1,7 +1,6 @@
 import React from "react";
 
 export default function ApiResults(props) {
-  console.log(props.results);
   if (props.data) {
     return (
       <div className="ApiResults">

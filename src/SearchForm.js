@@ -4,21 +4,31 @@ import ApiResults from "./ApiResults";
 import "./SearchForm.css";
 
 export default function SearchForm() {
-  const [word, setWord] = useState("");
+  const [keyWord, setKeyWord] = useState("");
   const [results, setResults] = useState(null);
+  const [word, setWord] = useState("");
+
+  function mapResults() {
+    results.map(function (word, index) {
+      return <div key={index}>{word}</div>;
+    });
+    setWord({ word });
+  }
 
   function handleResponse(response) {
-    setResults(response.data[0]);
+    setResults(response.data);
+    console.log({ results });
+    mapResults();
   }
 
   function search(event) {
     event.preventDefault();
-    const apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${word}`;
+    const apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${keyWord}`;
     axios.get(apiUrl).then(handleResponse);
   }
 
-  function updateWord(event) {
-    setWord(event.target.value);
+  function updateKeyWord(event) {
+    setKeyWord(event.target.value);
   }
   return (
     <div className="SearchForm">
@@ -26,12 +36,12 @@ export default function SearchForm() {
         <input
           type="search"
           placeholder="Enter a word"
-          onChange={updateWord}
+          onChange={updateKeyWord}
           autoFocus={true}
         />
       </form>
       <i className="bi bi-search"></i>
-      <ApiResults data={results} />
+      <ApiResults data={word} />
     </div>
   );
 }
