@@ -1,11 +1,17 @@
 import React from "react";
 
 export default function ApiResults(props) {
+  console.log(props.data);
+  let word = function mapResults() {
+    props.data.map(function (word, index) {
+      return <div key={index}>{word}</div>;
+    });
+  };
   if (props.data) {
     return (
       <div className="ApiResults">
-        <h3>{props.data.word}</h3>
-        {props.data.meanings.map(function (meaning, index) {
+        <h3>{word.word}</h3>
+        {word.meanings.map(function (meaning, index) {
           return (
             <div key={index}>
               <h4>{meaning.partOfSpeech}</h4>
