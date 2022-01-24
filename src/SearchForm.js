@@ -6,19 +6,9 @@ import "./SearchForm.css";
 export default function SearchForm() {
   const [keyWord, setKeyWord] = useState("");
   const [results, setResults] = useState(null);
-  const [word, setWord] = useState("");
-
-  function mapResults() {
-    results.map(function (word, index) {
-      return <div key={index}>{word}</div>;
-    });
-    setWord({ word });
-  }
 
   function handleResponse(response) {
-    setResults(response.data);
-    console.log({ results });
-    mapResults();
+    setResults(response.data[0]);
   }
 
   function search(event) {
@@ -41,7 +31,7 @@ export default function SearchForm() {
         />
       </form>
       <i className="bi bi-search"></i>
-      <ApiResults data={word} />
+      <ApiResults data={results} />
     </div>
   );
 }
