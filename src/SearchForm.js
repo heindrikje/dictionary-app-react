@@ -8,7 +8,7 @@ export default function SearchForm() {
   const [results, setResults] = useState(null);
 
   function handleResponse(response) {
-    setResults(response.data);
+    setResults(response.data[0]);
   }
 
   function search(event) {
