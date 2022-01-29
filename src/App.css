@@ -15,6 +15,16 @@ body {
   margin-bottom: 20px;
 }
 
+.App .bookshelf-left img,
+.App .bookshelf-right img {
+  width: 400px;
+  opacity: 0.5;
+}
+
+.App .bookshelf-left img {
+  transform: scaleX(-1);
+}
+
 .App section {
   background: white;
   padding: 15px;

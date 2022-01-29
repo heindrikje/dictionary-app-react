@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import ApiResults from "./ApiResults";
 import "./SearchForm.css";
+import imgTypewriter from "./imgTypewriter.jpg";
 
 export default function SearchForm() {
   const [keyWord, setKeyWord] = useState("");
@@ -20,8 +21,9 @@ export default function SearchForm() {
   function updateKeyWord(event) {
     setKeyWord(event.target.value);
   }
-  return (
-    <div className="SearchForm">
+
+  let form = (
+    <div>
       <form onSubmit={search}>
         <input
           type="search"
@@ -31,19 +33,29 @@ export default function SearchForm() {
         />
       </form>
       <i className="bi bi-search"></i>
-      <div className="userTyping">{keyWord}</div>
-      <ApiResults data={results} />
     </div>
   );
+
+  if (results) {
+    return (
+      <div className="SearchForm">
+        {form}
+        <ApiResults data={results} />
+      </div>
+    );
+  } else {
+    return (
+      <div className="SearchForm">
+        {form}
+        <div className="typewriter">
+          <img src={imgTypewriter} alt="typewriter" />
+        </div>
+        <div className="userTyping">{keyWord}</div>
+      </div>
+    );
+  }
 }
 
 // Hintergrundbild von Büchern/Wörtern
 // Oder Hintergrund mit Farbverlauf; einzelne Dinger mit gleichem, aber dann mit Box shadow, sodass sie "hervorstehen"
-// statt react Zeichen im Tab ein Buch Icon
-// cooler Header
-// Dictionary evtl auch als Header mit mehreren Büchern im Hintergrund
-// hr zwischen den Sachen (oder auch nur nach search engine)
-// cooles Bild oder Icon über Dictionary App
-// Synonyme in kleinen platten "Kreisen" (Art buttons)
-// Anhörding (Icon/Play-Button) und Lautschrift in einem Button-Ding?
 // an den Seiten Bilder von Bibliothek/Wörtern?
