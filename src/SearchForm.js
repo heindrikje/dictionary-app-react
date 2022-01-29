@@ -31,16 +31,15 @@ export default function SearchForm() {
         />
       </form>
       <i className="bi bi-search"></i>
+      <div className="userTyping">{keyWord}</div>
       <ApiResults data={results} />
     </div>
   );
 }
 
 // Hintergrundbild von Büchern/Wörtern
-// für die einzelnen Sachen eigene [weiße] Dinger?
 // Oder Hintergrund mit Farbverlauf; einzelne Dinger mit gleichem, aber dann mit Box shadow, sodass sie "hervorstehen"
 // statt react Zeichen im Tab ein Buch Icon
-// coole Schriftarten
 // cooler Header
 // Dictionary evtl auch als Header mit mehreren Büchern im Hintergrund
 // hr zwischen den Sachen (oder auch nur nach search engine)

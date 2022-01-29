@@ -1,4 +1,4 @@
-.SearchForm {
+.SearchForm form {
   width: 250px;
   margin: 0 auto 30px auto;
   position: relative;
@@ -20,12 +20,20 @@
 .SearchForm .bi-search {
   color: #67869b;
   position: absolute;
-  right: -20px;
-  top: 5px;
+  right: 235px;
+  top: 122px;
   transition: all 150ms ease-in-out;
 }
 
 .SearchForm .bi-search:hover {
   cursor: pointer;
   color: #476279;
+}
+
+.SearchForm .userTyping {
+  font-family: "Special Elite", cursive;
+  position: relative;
+  font-size: 20px;
+  top: 52px;
+  left: 205px;
 }

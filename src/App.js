@@ -23,6 +23,3 @@ export default function App() {
     </div>
   );
 }
-
-// font: Zilla Slab (z.B. mit Montserrat)
-// oder Playfair Display (z.B. mit Lato, Roboto, Open Sans)
