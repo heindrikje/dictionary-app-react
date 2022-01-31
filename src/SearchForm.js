@@ -55,7 +55,3 @@ export default function SearchForm() {
     );
   }
 }
-
-// Hintergrundbild von Büchern/Wörtern
-// Oder Hintergrund mit Farbverlauf; einzelne Dinger mit gleichem, aber dann mit Box shadow, sodass sie "hervorstehen"
-// an den Seiten Bilder von Bibliothek/Wörtern?

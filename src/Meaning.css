@@ -1,0 +1,15 @@
+.Meaning .partOfSpeech {
+  margin-bottom: 0;
+}
+
+.Meaning hr {
+  margin: 12px 0;
+}
+
+.Meaning .definition {
+  margin-bottom: 5px;
+}
+
+.Meaning .example {
+  opacity: 0.8;
+}

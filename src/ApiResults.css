@@ -1,4 +1,9 @@
 .ApiResults .keyword {
   font-family: "Playfair Display", serif;
-  margin-top: 20px;
+  font-size: 32px;
+}
+
+.ApiResults img {
+  width: 150px;
+  float: right;
 }

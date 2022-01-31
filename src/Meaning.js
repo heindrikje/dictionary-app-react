@@ -1,10 +1,12 @@
 import React from "react";
 import Synonyms from "./Synonyms";
+import "./Meaning.css";
 
 export default function Meaning(props) {
   return (
     <div className="Meaning">
-      <h4 className="partOfSpeech">{props.meaningData.partOfSpeech}</h4>
+      <h3 className="partOfSpeech">{props.meaningData.partOfSpeech}</h3>
+      <hr />
       {props.meaningData.definitions.map(function (definition, index) {
         return (
           <div key="index">
@@ -20,4 +22,4 @@ export default function Meaning(props) {
   );
 }
 
-// example näher an Definition
+// Aufzählung in den Loop der Definitionen einfügen?

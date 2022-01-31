@@ -15,20 +15,13 @@ body {
   margin-bottom: 20px;
 }
 
-.App .bookshelf-left img,
-.App .bookshelf-right img {
-  width: 400px;
-  opacity: 0.5;
-}
-
-.App .bookshelf-left img {
-  transform: scaleX(-1);
-}
-
 .App section {
-  background: white;
-  padding: 15px;
-  margin: 20px 0;
+  background: #fefbf3;
+  padding: 15px 25px;
+  margin: 20px auto;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
 }
 
 .App footer {
