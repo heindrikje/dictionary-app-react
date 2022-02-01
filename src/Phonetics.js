@@ -13,7 +13,7 @@ export default function Phonetics(props) {
               rel="noreferrer"
               className="audio"
             >
-              <i class="bi bi-headphones"></i>
+              <i className="bi bi-headphones"></i>
             </a>
             <span className="phoneticText">/{phonetic.text}/</span>
           </div>
@@ -22,6 +22,3 @@ export default function Phonetics(props) {
     </div>
   );
 }
-
-// icon für audio nutzen, dann onClick event
-// mit HTML5 audio api oder react audio player

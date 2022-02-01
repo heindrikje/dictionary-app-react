@@ -5,11 +5,19 @@ import "./ApiResults.css";
 import undrawBooks from "./undrawBooks.svg";
 
 export default function ApiResults(props) {
+  function showHomepage(event) {
+    alert("Cool");
+  }
+
   if (props.data) {
     return (
       <div className="ApiResults">
         <section>
-          <img src={undrawBooks} alt="books" />
+          <img
+            src={undrawBooks}
+            alt="books"
+            onclick="window.history.go(-1); return false;"
+          />
           <h2 className="keyword">{props.data.word}</h2>
           <Phonetics phoneticsData={props.data.phonetics} />
         </section>
@@ -26,3 +34,7 @@ export default function ApiResults(props) {
     return null;
   }
 }
+
+// Auf dem Bild die beiden Pfeile zu unsichtbaren Links machen
+// die dann auf die Startseite verlinken
+// onClick event auf Bild?
