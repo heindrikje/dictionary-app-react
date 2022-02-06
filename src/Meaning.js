@@ -21,5 +21,3 @@ export default function Meaning(props) {
     </div>
   );
 }
-
-// Aufzählung in den Loop der Definitionen einfügen?

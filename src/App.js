@@ -23,5 +23,3 @@ export default function App() {
     </div>
   );
 }
-
-// Typewriter checken, wie es bei größerem Bildschirm aussieht
