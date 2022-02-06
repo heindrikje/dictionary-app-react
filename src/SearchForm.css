@@ -8,8 +8,9 @@
   background-color: transparent;
   border: 1px solid #67869b;
   border-width: 0 0 1px;
-  width: 250px;
   padding: 7px 0 3px 2px;
+  display: inline;
+  width: 230px;
 }
 
 .SearchForm input:focus {
@@ -18,9 +19,7 @@
 
 .SearchForm .bi-search {
   color: #67869b;
-  position: absolute;
-  right: 235px;
-  top: 122px;
+  display: inline;
   transition: all 150ms ease-in-out;
 }
 

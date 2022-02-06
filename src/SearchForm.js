@@ -31,8 +31,8 @@ export default function SearchForm() {
           onChange={updateKeyWord}
           autoFocus={true}
         />
+        <i className="bi bi-search"></i>
       </form>
-      <i className="bi bi-search"></i>
     </div>
   );
 

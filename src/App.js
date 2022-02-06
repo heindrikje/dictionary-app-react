@@ -24,4 +24,4 @@ export default function App() {
   );
 }
 
-// Lupe und Typewriter checken, wie es bei größerem Bildschirm aussieht
+// Typewriter checken, wie es bei größerem Bildschirm aussieht
