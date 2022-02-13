@@ -61,8 +61,10 @@ export default function SearchForm() {
         {form}
         <div className="typewriter">
           <img src={imgTypewriter} alt="typewriter" />
+          <div className="userTyping">
+            <span className="keyWord">{keyWord}</span>
+          </div>
         </div>
-        <div className="userTyping">{keyWord}</div>
       </div>
     );
   }

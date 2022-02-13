@@ -28,18 +28,25 @@
   color: #476279;
 }
 
-.typewriter img {
-  border-radius: 5px;
+.SearchForm .typewriter {
+  max-width: 516px;
   display: block;
   margin: 0 auto;
+  position: relative;
+}
+
+.SearchForm .typewriter img {
+  border-radius: 5px;
   width: 100%;
-  max-width: 516px;
 }
 
 .SearchForm .userTyping {
   font-family: "Special Elite", cursive;
-  position: relative;
   font-size: 20px;
-  bottom: 310px;
-  left: 205px;
+  position: absolute;
+  top: 40px;
+  left: 210px;
+}
+.SearchForm .keyWord {
+  max-width: 50%;
 }
