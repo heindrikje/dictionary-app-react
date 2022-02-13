@@ -24,7 +24,7 @@ export default function SearchForm() {
     axios.get(dictionaryApiUrl).then(handleResponse);
     const pexelsApiKey =
       "563492ad6f917000010000011335da953170479b997e25123744707f";
-    let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyWord}&per_page=3`;
+    let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyWord}&per_page=12`;
     let headers = { Authorization: `Bearer ${pexelsApiKey}` };
     axios.get(pexelsApiUrl, { headers: headers }).then(handlePexelsResponse);
   }
